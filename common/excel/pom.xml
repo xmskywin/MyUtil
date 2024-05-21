@@ -4,22 +4,27 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>MyUtil</artifactId>
         <groupId>com.hxy</groupId>
+        <artifactId>common</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>common</artifactId>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>bom</module>
-        <module>excel</module>
-    </modules>
+    <artifactId>excel</artifactId>
 
     <description>
-        common 通用模块
+        common-excel
     </description>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.dromara</groupId>
+            <artifactId>ruoyi-common-json</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
