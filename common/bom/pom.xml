@@ -14,7 +14,7 @@
     </description>
 
     <properties>
-        <revision>5.1.0-BETA</revision>
+        <revision>1.0.0</revision>
     </properties>
 
     <dependencyManagement>
@@ -22,6 +22,16 @@
             <dependency>
                 <groupId>com.hxy</groupId>
                 <artifactId>excel</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hxy</groupId>
+                <artifactId>core</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hxy</groupId>
+                <artifactId>json</artifactId>
                 <version>${revision}</version>
             </dependency>
         </dependencies>

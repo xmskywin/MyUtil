@@ -24,6 +24,7 @@
           <entry name="D:/mavenplus-rep/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
         </processorPath>
         <module name="excel" />
+        <module name="core" />
       </profile>
     </annotationProcessing>
   </component>
@@ -31,6 +32,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="MyUtil" options="-parameters" />
       <module name="common" options="-parameters" />
+      <module name="core" options="-parameters" />
       <module name="excel" options="-parameters" />
     </option>
   </component>
