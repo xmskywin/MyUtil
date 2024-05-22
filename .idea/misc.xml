@@ -8,6 +8,8 @@
         <option value="$PROJECT_DIR$/common/bom/pom.xml" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/common/core/pom.xml" />
+        <option value="$PROJECT_DIR$/common/json/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />

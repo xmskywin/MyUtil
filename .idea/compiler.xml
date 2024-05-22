@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
       </profile>
-      <profile name="Annotation profile for MyUtil" enabled="true">
+      <profile name="Annotation profile for json" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -24,6 +24,7 @@
           <entry name="D:/mavenplus-rep/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
         </processorPath>
         <module name="excel" />
+        <module name="json" />
         <module name="core" />
       </profile>
     </annotationProcessing>
@@ -34,6 +35,7 @@
       <module name="common" options="-parameters" />
       <module name="core" options="-parameters" />
       <module name="excel" options="-parameters" />
+      <module name="json" options="-parameters" />
     </option>
   </component>
 </project>
