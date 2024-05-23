@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ImageUtil {
-    // 图片默认缩放比率
+    // 图片默认缩放比率添加注释
     private static final double DEFAULT_SCALE = 0.2d;
 
     // 缩略图后缀
