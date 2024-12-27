@@ -1,4 +1,4 @@
-package config.properties;
+package config;
 
 import cn.hutool.core.util.ArrayUtil;
 import exception.ServiceException;
