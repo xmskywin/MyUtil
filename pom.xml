@@ -7,9 +7,70 @@
     <groupId>com.hxy</groupId>
     <artifactId>MyUtil</artifactId>
     <version>${revision}</version>
+    <packaging>pom</packaging>
     <modules>
         <module>common</module>
     </modules>
+    <profiles>
+        <profile>
+            <id>all</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>common</module>
+                <module>common/json</module>
+                <module>common/core</module>
+                <module>common/excel</module>
+                <module>common/bom</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>json</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>common</module>
+                <module>common/json</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>core</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>common</module>
+                <module>common/core</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>excel</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>common</module>
+                <module>common/excel</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>bom</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>common</module>
+                <module>common/bom</module>
+            </modules>
+        </profile>
+
+
+    </profiles>
     <properties>
         <revision>1.0.0</revision>
         <spring-boot.version>3.1.3</spring-boot.version>
@@ -45,7 +106,6 @@
         <snakeyaml.version>1.33</snakeyaml.version>
         <orai18n.version>19.7.0.0</orai18n.version>
     </properties>
-
     <dependencyManagement>
         <dependencies>
             <!-- SpringBoot的依赖配置-->
@@ -198,7 +258,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <packaging>pom</packaging>
+
     <build>
         <plugins>
             <plugin>
