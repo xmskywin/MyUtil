@@ -34,6 +34,11 @@
                 <artifactId>json</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>com.hxy</groupId>
+                <artifactId>log</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

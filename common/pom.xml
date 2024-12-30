@@ -17,6 +17,7 @@
         <module>excel</module>
         <module>core</module>
         <module>json</module>
+        <module>log</module>
     </modules>
 
     <description>
