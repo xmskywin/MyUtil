@@ -13,7 +13,6 @@ import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
 import org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -30,20 +29,17 @@ import java.util.TimeZone;
 public class JacksonConfig {
     @Bean
     public Jackson2ObjectMapperBuilderCustomizer customizer() {
-        return new Jackson2ObjectMapperBuilderCustomizer() {
-            @Override
-            public void customize(Jackson2ObjectMapperBuilder jacksonObjectMapperBuilder) {
-                JavaTimeModule javaTimeModule = new JavaTimeModule();
-                javaTimeModule.addSerializer(Long.class, BigNumberSerializer.BIG_NUMBER_SERIALIZER);
-                javaTimeModule.addSerializer(Long.TYPE, BigNumberSerializer.BIG_NUMBER_SERIALIZER);
-                javaTimeModule.addSerializer(BigInteger.class, BigNumberSerializer.BIG_NUMBER_SERIALIZER);
-                javaTimeModule.addSerializer(BigDecimal.class, ToStringSerializer.instance);
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-                javaTimeModule.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(formatter));
-                javaTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(formatter));
-                jacksonObjectMapperBuilder.modulesToInstall(javaTimeModule);
-                jacksonObjectMapperBuilder.timeZone(TimeZone.getDefault());
-            }
+        return jacksonObjectMapperBuilder -> {
+            JavaTimeModule javaTimeModule = new JavaTimeModule();
+            javaTimeModule.addSerializer(Long.class, BigNumberSerializer.BIG_NUMBER_SERIALIZER);
+            javaTimeModule.addSerializer(Long.TYPE, BigNumberSerializer.BIG_NUMBER_SERIALIZER);
+            javaTimeModule.addSerializer(BigInteger.class, BigNumberSerializer.BIG_NUMBER_SERIALIZER);
+            javaTimeModule.addSerializer(BigDecimal.class, ToStringSerializer.instance);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+            javaTimeModule.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(formatter));
+            javaTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(formatter));
+            jacksonObjectMapperBuilder.modulesToInstall(javaTimeModule);
+            jacksonObjectMapperBuilder.timeZone(TimeZone.getDefault());
         };
     }
 
