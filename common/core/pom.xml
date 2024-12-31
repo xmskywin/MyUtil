@@ -83,6 +83,11 @@
             <groupId>org.lionsoul</groupId>
             <artifactId>ip2region</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.hxy</groupId>
+            <artifactId>json</artifactId>
+            <version>${revision}</version>
+        </dependency>
 
     </dependencies>
 
