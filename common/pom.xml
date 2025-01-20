@@ -18,6 +18,7 @@
         <module>core</module>
         <module>json</module>
         <module>log</module>
+        <module>redis</module>
     </modules>
 
     <description>

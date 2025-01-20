@@ -39,6 +39,11 @@
                 <artifactId>log</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>com.hxy</groupId>
+                <artifactId>redis</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
